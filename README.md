@@ -3,8 +3,8 @@
 This is a tool for [Manim](https://raw.githubusercontent.com/3b1b/manim)
 
 ### including
-* animation output helper
-* fonts.py for easier access to fontss
+* animation output GUI
+* fonts.py for easier access to fonts
 ## Requirements
 * Only works on Windows, you may change some codes in order to use it on other platforms.
 * Does not include Manim or Python environment, you need to have those environment before using this.
