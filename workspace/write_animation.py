@@ -1,11 +1,16 @@
 import os
-import shutil
+import sys
+
+curPath = os.path.abspath(os.path.dirname(__file__))
+rootPath = os.path.split(curPath)[0]
+sys.path.append(rootPath)
+
 import tkinter
 
 from tkinter import *
 import tkinter.messagebox
 
-import utils_lib.file_utils
+from workspace.utils_lib.write_texts_utils import make_writing_animation
 
 
 def printState():
@@ -13,11 +18,12 @@ def printState():
 
 
 def videoOut():
-    utils_lib.file_utils.video_output_helper(sceneClassName=sceneClassName.get(),
-                                            pyFileName='animation.py',
-                                            arguments=getArguments(),
-                                            argumentsForCopy=showInExplorer.get()
-                                            )
+    make_writing_animation(text=userInputText.get(),
+                           scaleNum=float(textSizeInputStr.get()),
+                           waitTime=float(waitTimeStr.get()),
+                           argumentsForManim=getArguments(),
+                           argumentsForCopy=showInExplorer.get()
+                           )
 
 
 def getArguments():
@@ -71,19 +77,41 @@ root.bind('Button-3', topMenu)
 leftFrame = Frame(root)
 leftFrame.place(relx=0.1)
 
-# Scene Class Name #############
+# user input #############
 # label
-sceneClassNameInputLabel = Label(leftFrame, text='Scene Class Name')
-sceneClassNameInputLabel.pack()
+userInputTextLabel = Label(leftFrame, text='Texts you want to write')
+userInputTextLabel.pack()
 # entry
-sceneClassName = StringVar()
-sceneClassName.set('PrintTexts')
+userInputText = StringVar()
+userInputText.set('Your Texts Here')
 sceneClassNameInput = Entry(leftFrame,
                             exportselection=0,  # 默认情况下，你如果在输入框中选中文本，默认会复制到粘贴板，如果要忽略这个功能刻工艺设置 exportselection=0。
-                            textvariable=sceneClassName
+                            textvariable=userInputText
                             )
 
 sceneClassNameInput.pack(fill=X)
+# label
+textSizeInputLabel = Label(leftFrame, text='Texts Size')
+textSizeInputLabel.pack()
+# entry
+textSizeInputStr = StringVar()
+textSizeInputStr.set('2')
+textSizeInput = Entry(leftFrame,
+                      exportselection=0,  # 默认情况下，你如果在输入框中选中文本，默认会复制到粘贴板，如果要忽略这个功能刻工艺设置 exportselection=0。
+                      textvariable=textSizeInputStr
+                      )
+textSizeInput.pack(fill=X)
+# label
+waitTimeLabel = Label(leftFrame, text='Wait Time')
+waitTimeLabel.pack()
+# entry
+waitTimeStr = StringVar()
+waitTimeStr.set('1')
+waitTimeInput = Entry(leftFrame,
+                      exportselection=0,  # 默认情况下，你如果在输入框中选中文本，默认会复制到粘贴板，如果要忽略这个功能刻工艺设置 exportselection=0。
+                      textvariable=waitTimeStr
+                      )
+waitTimeInput.pack(fill=X)
 # Output Bottom #############
 outputBottomLabel = Label(leftFrame,
                           text='\n')

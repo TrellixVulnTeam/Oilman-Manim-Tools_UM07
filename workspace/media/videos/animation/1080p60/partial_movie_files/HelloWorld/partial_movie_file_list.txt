@@ -1,8 +1,0 @@
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00000.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00001.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00002.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00003.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00004.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00005.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00006.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/1080p60/partial_movie_files/HelloWorld/00007.mp4'
