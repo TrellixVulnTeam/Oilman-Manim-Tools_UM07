@@ -5,7 +5,7 @@ import tkinter
 from tkinter import *
 import tkinter.messagebox
 
-from workspace.utils.file_utils import get_name
+import utilslib.file_utils
 
 
 def printState():
@@ -17,20 +17,38 @@ def videoOut():
 
     print('Final argument is: ' + getArguments())
 
-    os.system(
-        'python "C:\Program Files\Python37\Lib\manim\manim.py" test.py PrintTexts' + getArguments())
+    manimPath = '"C:\Program Files\Python37\Lib\manim\manim.py"'
+    pyFileName = 'animation.py'
+    sceneClassName = 'PrintTexts'
+    CMDInput = '%s %s %s %s%s' % ('python', manimPath, pyFileName, sceneClassName, getArguments())
+
+    os.system(CMDInput)
     if outputQuality.get() == 0:
         defaultPath = '%s%s%s' % (os.getcwd(), '\\output\\', 'low\\')
 
     else:
         defaultPath = '%s%s' % (os.getcwd(), '\\output\\')
 
-    if getArguments().__contains__("-t"):
-        outFileDir = get_name(dir=defaultPath, f='manim.mov')
-        inputFileDir = r'%s%s%s%s%s' % (os.getcwd(), '\\media\\videos\\', 'test\\', '480p15\\', 'PrintTexts.mov')
+    inputFileDirRoot = inputFileDir = '%s%s%s' % (os.getcwd(), '\\media\\videos\\', 'animation\\')
+
+    inputFileName = ''
+    if getArguments().__contains__(" --transparent"):
+        inputFileName = '%s%s' % (sceneClassName, '.mov')
     else:
-        outFileDir = get_name(dir=defaultPath, f='manim.mp4')
-        inputFileDir = r'%s%s%s%s%s' % (os.getcwd(), '\\media\\videos\\', 'test\\', '480p15\\', 'PrintTexts.mp4')
+        inputFileName = '%s%s' % (sceneClassName, '.mp4')
+
+    qualityName = ''
+    if getArguments().__contains__(' --low_quality'):
+        qualityName = '480p15'
+    if getArguments().__contains__(' --high_quality'):
+        qualityName = '1080p60'
+    if getArguments().__contains__(' --resolution 2160,3840'):
+        qualityName = '2160p60'
+
+    outFileDir = utilslib.file_utils.get_name(dir=defaultPath,
+                                              qualityName=qualityName,
+                                              fileName=inputFileName)
+    inputFileDir = r'%s%s%s' % (inputFileDirRoot, qualityName + '\\', inputFileName)
 
     shutil.copy(inputFileDir, outFileDir)
 
@@ -38,13 +56,15 @@ def videoOut():
 def getArguments():
     arguments = ""
     if isTransparent.get() == 1:
-        arguments += " -t"
+        arguments += " --transparent"
     if isForPreviewing.get() == 1:
-        arguments += " -p"
-    if outputQuality.get() == 0:
-        arguments += " -l"
-    if outputQuality.get() == 1:
+        arguments += " --preview"
+    if outputQuality.get() == qualityDic.get('low'):
+        arguments += " --low_quality"
+    if outputQuality.get() == qualityDic.get('high'):
         arguments += " --high_quality"
+    if outputQuality.get() == qualityDic.get('4k'):
+        arguments += " --resolution 2160,3840"
     return arguments
 
 
@@ -79,32 +99,59 @@ aboutMenu.add_command(label="About", command=popMessagebox)
 root.config(menu=mainMenu)
 root.bind('Button-3', topMenu)
 
-bottom = Button(root,
+################################################
+# left frame
+leftFrame = Frame(root)
+leftFrame.place(relx=0.0)
+# bottom
+bottom = Button(leftFrame,
                 text="Output",
-                command=lambda: videoOut()
+                command=videoOut
                 )
-bottom.place(relx=0.25, rely=0.6, relwidth=0.5, relheight=0.3)
+bottom.pack(fill=Y)
 
+################################################
+# right frame
+rightFrame = Frame(root)
+rightFrame.place(relx=0.5)
+# quality selection
+qualityDic = {'low': 0, 'high': 1, '4k': 2}
 outputQuality = IntVar()
-lowQualityRadioBottom = Radiobutton(root, text="Low Quality",
+lowQualityRadioBottom = Radiobutton(rightFrame, text="Low Quality",
                                     variable=outputQuality,
-                                    value=0,
+                                    value=qualityDic.get('low'),
+                                    command=printState
                                     )
 lowQualityRadioBottom.pack()
 
-HighQualityRadioBottom = Radiobutton(root, text="High Quality",
+HighQualityRadioBottom = Radiobutton(rightFrame, text="High Quality",
                                      variable=outputQuality,
-                                     value=1,
+                                     value=qualityDic.get('high'),
+                                     command=printState
                                      )
 HighQualityRadioBottom.pack()
 
+UHDQualityRadioBottom = Radiobutton(rightFrame, text="4K",
+                                    variable=outputQuality,
+                                    value=qualityDic.get('4k'),
+                                    command=printState
+                                    )
+UHDQualityRadioBottom.pack()
+
+# Other options
 isForPreviewing = IntVar()
-previewCheckBox = Checkbutton(root, text='preview', variable=isForPreviewing, onvalue=1, offvalue=0)
+previewCheckBox = Checkbutton(rightFrame, text='preview',
+                              variable=isForPreviewing,
+                              onvalue=1, offvalue=0,
+                              command=printState)
 previewCheckBox.select()
-previewCheckBox.pack()
+previewCheckBox.pack(fill=X)
 
 isTransparent = IntVar()
-transparentCheckBox = Checkbutton(root, text='transparent', variable=isTransparent, onvalue=1, offvalue=0)
+transparentCheckBox = Checkbutton(rightFrame, text='transparent',
+                                  variable=isTransparent,
+                                  onvalue=1, offvalue=0,
+                                  command=printState)
 transparentCheckBox.pack()
 
 root.mainloop()
