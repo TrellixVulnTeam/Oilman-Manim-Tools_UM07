@@ -13,44 +13,11 @@ def printState():
 
 
 def videoOut():
-    global argsForQuality
-
-    print('Final argument is: ' + getArguments())
-
-    manimPath = '"C:\Program Files\Python37\Lib\manim\manim.py"'
-    pyFileName = 'animation.py'
-    sceneClassName = 'PrintTexts'
-    CMDInput = '%s %s %s %s%s' % ('python', manimPath, pyFileName, sceneClassName, getArguments())
-
-    os.system(CMDInput)
-    if outputQuality.get() == 0:
-        defaultPath = '%s%s%s' % (os.getcwd(), '\\output\\', 'low\\')
-
-    else:
-        defaultPath = '%s%s' % (os.getcwd(), '\\output\\')
-
-    inputFileDirRoot = inputFileDir = '%s%s%s' % (os.getcwd(), '\\media\\videos\\', 'animation\\')
-
-    inputFileName = ''
-    if getArguments().__contains__(" --transparent"):
-        inputFileName = '%s%s' % (sceneClassName, '.mov')
-    else:
-        inputFileName = '%s%s' % (sceneClassName, '.mp4')
-
-    qualityName = ''
-    if getArguments().__contains__(' --low_quality'):
-        qualityName = '480p15'
-    if getArguments().__contains__(' --high_quality'):
-        qualityName = '1080p60'
-    if getArguments().__contains__(' --resolution 2160,3840'):
-        qualityName = '2160p60'
-
-    outFileDir = utilslib.file_utils.get_name(dir=defaultPath,
-                                              qualityName=qualityName,
-                                              fileName=inputFileName)
-    inputFileDir = r'%s%s%s' % (inputFileDirRoot, qualityName + '\\', inputFileName)
-
-    shutil.copy(inputFileDir, outFileDir)
+    utilslib.file_utils.video_output_helper(sceneClassName=sceneClassName.get(),
+                                            pyFileName='animation.py',
+                                            arguments=getArguments(),
+                                            argumentsForCopy=showInExplorer.get()
+                                            )
 
 
 def getArguments():
@@ -102,19 +69,42 @@ root.bind('Button-3', topMenu)
 ################################################
 # left frame
 leftFrame = Frame(root)
-leftFrame.place(relx=0.0)
+leftFrame.place(relx=0.1)
+
+# Scene Class Name #############
+# label
+sceneClassNameInputLabel = Label(leftFrame, text='Scene Class Name')
+sceneClassNameInputLabel.pack()
+# entry
+sceneClassName = StringVar()
+sceneClassName.set('PrintTexts')
+sceneClassNameInput = Entry(leftFrame,
+                            exportselection=0,  # 默认情况下，你如果在输入框中选中文本，默认会复制到粘贴板，如果要忽略这个功能刻工艺设置 exportselection=0。
+                            textvariable=sceneClassName
+                            )
+
+sceneClassNameInput.pack(fill=X)
+# Output Bottom #############
+outputBottomLabel = Label(leftFrame,
+                          text='\n')
+outputBottomLabel.pack()
 # bottom
-bottom = Button(leftFrame,
-                text="Output",
-                command=videoOut
-                )
-bottom.pack(fill=Y)
+outputBottom = Button(leftFrame,
+                      text="Output",
+                      command=videoOut
+                      )
+outputBottom.pack(fill=X)
 
 ################################################
 # right frame
 rightFrame = Frame(root)
 rightFrame.place(relx=0.5)
+
 # quality selection
+# label
+qualitySelectionLabel = Label(rightFrame, text='Quality Selection')
+qualitySelectionLabel.pack()
+# radio bottom
 qualityDic = {'low': 0, 'high': 1, '4k': 2}
 outputQuality = IntVar()
 lowQualityRadioBottom = Radiobutton(rightFrame, text="Low Quality",
@@ -139,6 +129,8 @@ UHDQualityRadioBottom = Radiobutton(rightFrame, text="4K",
 UHDQualityRadioBottom.pack()
 
 # Other options
+otherOptionsLabel = Label(rightFrame, text='Other Options')
+otherOptionsLabel.pack()
 isForPreviewing = IntVar()
 previewCheckBox = Checkbutton(rightFrame, text='preview',
                               variable=isForPreviewing,
@@ -153,5 +145,12 @@ transparentCheckBox = Checkbutton(rightFrame, text='transparent',
                                   onvalue=1, offvalue=0,
                                   command=printState)
 transparentCheckBox.pack()
+
+showInExplorer = StringVar()
+showInExplorerCheckBox = Checkbutton(rightFrame, text='Show in Explorer',
+                                     variable=showInExplorer,
+                                     onvalue="--show_in_explorer", offvalue='',
+                                     command=printState)
+showInExplorerCheckBox.pack()
 
 root.mainloop()
