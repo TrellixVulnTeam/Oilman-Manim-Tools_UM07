@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="240464a7-d01b-4f62-8fe8-8054d46660ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/helpers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animations.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts_for_manim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/texts/7541ecd7a74fb02e.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/texts/space.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/animations/1440p60/PrintTexts.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/animations/1440p60/partial_movie_files/PrintTexts/00000.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/animations/1440p60/partial_movie_files/PrintTexts/partial_movie_file_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/animations/480p15/PrintTexts.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/animations/480p15/partial_movie_files/PrintTexts/00000.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/videos/animations/480p15/partial_movie_files/PrintTexts/partial_movie_file_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/PrintTexts_480p15_2020-10-27-03-08-28.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/PrintTexts_480p15_2020-10-27-03-24-22.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_file_helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quality_selection_radio_bottoms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/window_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/window_invisible_helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/windows.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/media/texts/0acc941ea856dae4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/media/texts/21a3513b478aa64f.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/media/texts/625b5885231a9496.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/media/texts/8cdd3946b5bcd12e.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/PrintTexts.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/partial_movie_files/PrintTexts/00001.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/output/PrintTexts_2160p60_2020-10-18-02-48-55.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/output/PrintTexts_2160p60_2020-10-18-02-58-01.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/output/PrintTexts_2160p60_2020-10-18-02-58-52.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/output/PrintTexts_2160p60_2020-10-23-07-57-25.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/output/PrintTexts_2160p60_2020-10-23-07-57-44.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/output/PrintTexts_480p15_2020-10-23-03-43-34.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace/output/PrintTexts_480p15_2020-10-27-03-04-15.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../write_texts_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Oilman-Manim-Tools.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Oilman-Manim-Tools.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/TEMP/temp_write.py" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/TEMP/temp_write.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/PrintTexts.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/PrintTexts.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/partial_movie_files/PrintTexts/00000.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/partial_movie_files/PrintTexts/00000.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/partial_movie_files/PrintTexts/00001.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/2160p60/partial_movie_files/PrintTexts/00001.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/media/videos/temp_write/480p15/PrintTexts.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/480p15/PrintTexts.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/media/videos/temp_write/480p15/partial_movie_files/PrintTexts/00000.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/480p15/partial_movie_files/PrintTexts/00000.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/media/videos/temp_write/480p15/partial_movie_files/PrintTexts/00001.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/media/videos/temp_write/480p15/partial_movie_files/PrintTexts/00001.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../workspace/write_animation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../workspace/write_animation.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1jS4ubbROHWhRMvONOcSLGhElwD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="helpers" sdk-home="C:\Program Files\Python37\python.exe">
+        <option name="mySdkHome" value="C:\Program Files\Python37\python.exe" />
+        <option name="myModuleName" value="helpers" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="window" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="helpers" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.window" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="240464a7-d01b-4f62-8fe8-8054d46660ba" name="Default Changelist" comment="" />
+      <created>1603784382603</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603784382603</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="586" y="198" key="#Inspections" timestamp="1603788544973">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="198" key="#Inspections/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603788544973" />
+    <state x="2644" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603784564671">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2644" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603784564671" />
+    <state x="827" y="270" width="792" height="612" key="EnvironmentVariablesDialog" timestamp="1603785444635">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="827" y="270" width="792" height="612" key="EnvironmentVariablesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603785444635" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1603805496355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603805496355" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1603805496355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603805496355" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1603805496355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603805496355" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1603805496355">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603805496355" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1603785907749">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603785907749" />
+  </component>
+</project>

@@ -82,7 +82,7 @@ leftFrame.place(relx=0.1)
 userInputTextLabel = Label(leftFrame, text='Texts you want to write')
 userInputTextLabel.pack()
 # entry
-userInputText = StringVar()
+userInputText = tkinter.StringVar()
 userInputText.set('Your Texts Here')
 sceneClassNameInput = Entry(leftFrame,
                             exportselection=0,  # 默认情况下，你如果在输入框中选中文本，默认会复制到粘贴板，如果要忽略这个功能刻工艺设置 exportselection=0。
