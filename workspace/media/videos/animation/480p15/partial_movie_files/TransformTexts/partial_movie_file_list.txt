@@ -1,6 +1,0 @@
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/480p15/partial_movie_files/TransformTexts/00000.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/480p15/partial_movie_files/TransformTexts/00001.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/480p15/partial_movie_files/TransformTexts/00002.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/480p15/partial_movie_files/TransformTexts/00003.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/480p15/partial_movie_files/TransformTexts/00004.mp4'
-file 'file:D:/Developments/Git/Oilman-Manim-Tools/workspace/media/videos/animation/480p15/partial_movie_files/TransformTexts/00005.mp4'

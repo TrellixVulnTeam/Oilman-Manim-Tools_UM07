@@ -21,7 +21,7 @@ def make_temp_animation_file(text, scaleNum, waitTime):
 
 def make_animation(sceneClassName='PrintTexts', arguments=' --low_quality -p', argumentsForCopy='-show_in_explorer'):
     video_output_helper(sceneClassName, pyFileName='%s%s' % (os.getcwd(), '\\TEMP\\temp_write.py'), arguments=arguments,
-                        argumentsForCopy=argumentsForCopy)
+                        arguments_for_copy=argumentsForCopy)
 
 
 def make_writing_animation(text='Your Texts Here', scaleNum=2.0, waitTime=1.0, argumentsForManim=' --low_quality -p', argumentsForCopy='-show_in_explorer'):
