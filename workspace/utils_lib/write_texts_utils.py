@@ -4,7 +4,7 @@ from workspace.utils_lib.file_utils import video_output_helper
 
 
 def make_temp_animation_file(text, scaleNum, waitTime):
-    template_file_name = '%s%s' % (os.getcwd(), '\\a_lot_of_assets\\write.py.template')
+    template_file_name = '%s%s' % (os.getcwd(), '\\assets\\write.py.template')
     templateFile = open(template_file_name, mode='r')
     templateFileStr = templateFile.read()
     #  replacing keywords

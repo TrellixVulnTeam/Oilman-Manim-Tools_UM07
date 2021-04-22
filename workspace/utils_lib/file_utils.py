@@ -16,19 +16,19 @@ def get_new_name_with_copy(dir, f):
     return os.path.join(dir, f)  # 返回新文件路径
 
 
-def video_output_helper(sceneClassName, pyFileName, arguments, argumentsForCopy):
-    print('Final argument is: ' + arguments)
+def video_output_helper(scene_class_name: str, py_file_name: str, arguments_for_manim, argumentsForCopy):
+    print('Final argument is: ' + arguments_for_manim)
 
-    manimPath = '"C:\Program Files\Python37\Lib\manim\manim.py"'
+    # manimPath = '"C:\Program Files\Python37\Lib\manim\manim.py"'
 
-    CMDInput = '%s %s %s %s%s' % ('python', manimPath, pyFileName, sceneClassName, arguments)
-    print('Final call is: ' + CMDInput)
+    cmd_input = '%s %s %s %s%s' % ('python', '.\\venv\\Lib\\si\\manimlib\\manim.py', arguments_for_manim, scene_class_name, arguments_for_manim)
+    print('Final call is: ' + cmd_input)
 
-    os.system(CMDInput)
-    copyPyFileNameList = pyFileName.split('\\')
-    copyPyFileName = copyPyFileNameList[len(copyPyFileNameList)-1]
-    print("copyPyFileName"+copyPyFileName)
-    video_copy_helper(sceneClassName, copyPyFileName, arguments, argumentsForCopy)
+    os.system(cmd_input)
+    copyPyFileNameList = py_file_name.split('\\')
+    copyPyFileName = copyPyFileNameList[len(copyPyFileNameList) - 1]
+    print("copyPyFileName" + copyPyFileName)
+    video_copy_helper(scene_class_name, copyPyFileName, arguments_for_manim, argumentsForCopy)
 
 
 def video_copy_helper(sceneClassName, pyFileName, arguments, argumentsForCopy):

@@ -1,13 +1,12 @@
 import os
 import sys
-# from manim.manimlib.imports import *
-from manimlib.imports import *
+from manimlib import *
+from workspace.assets.fonts_for_manim import SouseHanSerifText
+
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
 sys.path.append(rootPath)
-# ######################################## For bat
-from workspace.a_lot_of_assets.fonts_for_manim import SouseHanSerifText
 
 
 class TempClass(Scene):
@@ -57,7 +56,7 @@ class svg(Scene):
 
         self.play(Write(text1))
         self.wait(3)
-        self.play(FadeOutAndShiftDown(text1))
+        self.play(FadeOut(text1))
         self.wait(3)
         self.play(Write(AIPC))
         self.wait(1)
