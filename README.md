@@ -2,7 +2,7 @@
 ## Introduction
 This is a tool for [Manim](https://raw.githubusercontent.com/3b1b/manim)
 
-### including
+### Features
 * animation output GUI (Support 4K 60 fps output)
 * fonts.py for easier access to fonts
 ## Requirements
@@ -13,3 +13,6 @@ This is a tool for [Manim](https://raw.githubusercontent.com/3b1b/manim)
 > start.bat will start window.py, which is a program with GUI for output animation.
 > 
 > Animation scenes need to be in animation.py otherwise you need to change the code.
+## Version
+> Manim tools 0.0.1
+> Manim 1.0.0
