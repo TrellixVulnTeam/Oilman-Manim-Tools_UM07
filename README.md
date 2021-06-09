@@ -1,6 +1,6 @@
 # Oilman-Manim-Tools
 ## Introduction
-This is a tool for [Manim](https://raw.githubusercontent.com/3b1b/manim)
+This is a tool for [Manim](https://github.com/3b1b/manim)
 
 ### Features
 * animation output GUI (Support 4K 60 fps output)
