@@ -15,6 +15,6 @@ This is a tool for [Manim](https://github.com/3b1b/manim)
 > 
 > Animation scenes need to be in animation.py otherwise you need to change the code.
 ## Version
-> Manim tools 0.0.1
-> Manim 1.0.0
-> Python 3.8
+Manim tools `0.0.1`
+Manim `1.0.0`
+Python `3.8`
