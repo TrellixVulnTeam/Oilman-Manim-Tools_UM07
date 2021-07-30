@@ -1,7 +1,9 @@
 from manimlib import *
 
+from fonts import *
+
 '''
-manimgl animation.py Out
+manimgl animation.py Theary
 Preview
 
 -w to write the scene to a file
@@ -11,51 +13,105 @@ Preview
 '''
 
 
-class Out(Scene):
+class NumberAnimation(Scene):
     def construct(self):
-        text = SourceHanSerifText(
-            "论证完毕",
+        linux = TimesNewRomanText(
+            'Linux',
+            color=BLUE,
+            font_size=80
+        )
+        five = TimesNewRomanText(
+            '5',
+            color=TEAL,
+            font_size=80
+        )
+        number_theory_1 = TimesNewRomanText(
+            '5 = 1 + 1 + 4 - 5 + 1 × 4',
+            t2c={'[:1]': TEAL},
+            font_size=80
+        )
+        number_theory_2 = TimesNewRomanText(
+            '1 + 1 + 4 - 5 + 1 × 4',
+            font_size=80
+        )
+        number_theory_3 = TimesNewRomanText(
+            '1 + 1 + 4 - 5 - 1 × 4',
+            font_size=80
+        )
+        number_theory_4 = TimesNewRomanText(
+            '1 + 1 + 4 - 5 - 1 + 4',
+            font_size=80
+        )
+        number_theory_5 = TimesNewRomanText(
+            '1 + 1 + 4 - 5 - 1 + 4 = 4',
+            font_size=80,
+            t2c={'[24:]': GOLD},
+        )
+
+        four = TimesNewRomanText(
+            "4",
+            font_size=80,
+            color=GOLD
+        )
+        bios = TimesNewRomanText(
+            "BIOS",
+            font_size=80,
+            color=GOLD
+        )
+        self.play(Write(linux))
+        self.wait(1)
+        self.play(Transform(linux, five))
+        self.wait()
+        self.play(Transform(linux, number_theory_1))
+        self.wait()
+        self.play(Transform(linux, number_theory_2))
+        self.wait()
+        self.play(Transform(linux, number_theory_3))
+        self.wait()
+        self.play(Transform(linux, number_theory_4))
+        self.wait()
+        self.play(Transform(linux, number_theory_5))
+        self.wait()
+        self.play(Transform(linux, four))
+        self.wait()
+        self.play(Transform(linux, bios))
+        self.wait()
+
+
+class Theory(Scene):
+    def construct(self):
+        a = 'Linux'
+        b = 'BIOS'
+        x = '精简'
+        a_is_x = SourceHanSerifTextScNormal(
+            "Linux 很精简",
+            t2c={a: BLUE, x: TEAL},
+            font_size=96,
+        )
+        b_is_also_x = SourceHanSerifTextScNormal(
+            "BIOS 也很精简",
+            t2c={b: GOLD, x: TEAL},
+            font_size=96
+        )
+        self.play(Write(a_is_x))
+        self.wait(1)
+        self.play(Transform(a_is_x, b_is_also_x))
+        self.wait(1)
+        self.play(Uncreate(a_is_x))
+
+
+class WriteSomething(Scene):
+    def construct(self):
+        text_to_write = TimesNewRomanText(
+            'Los Alamos National Laboratory',
+            font_size=70,
             color=BLUE
-        ).scale(3)
-        text2 = SourceHanSerifText(
-            "QED",
-            color=RED
-        ).scale(3)
-        self.play(Write(text))
+        )
+        self.play(Write(text_to_write))
         self.wait(1)
-        self.play(Transform(text, text2))
-        self.wait(1)
+        self.play(Uncreate(text_to_write))
 
 
 '''
 Some fonts
 '''
-
-
-# https://fonts.google.com/specimen/Noto+Serif+SC
-class SourceHanSerifText(Text):
-    CONFIG = {
-        'font': 'Source Han Serif SC',
-        'weight': BOLD
-    }
-
-
-# https://fonts.google.com/specimen/ZCOOL+KuaiLe
-# https://www.zcool.com.cn/special/zcoolfonts/
-class HappyZcoolText(Text):
-    CONFIG = {
-        'font': 'HappyZcool-2016'
-    }
-
-
-# https://fonts.google.com/specimen/Noto+Sans+SC
-class SouseHanSansText(Text):
-    CONFIG = {
-        'font': 'Noto Sans SC Black'
-    }
-
-
-class TimesNewRomanText(Text):
-    CONFIG = {
-        'font': 'Times New Roman'
-    }
